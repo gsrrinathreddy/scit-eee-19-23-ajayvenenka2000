@@ -5,8 +5,24 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
+import {useState,useEffect} from 'react';
+import axios from 'axios';
+
 
 export default function Hobbies() {
+    const [loader,setLoader] = useState(true);
+        const [hobbies,setHobbies] = useState(null);
+    
+        const connectToServer = async  () => axios.get('http://localhost:8000/hobbies')
+                                                .then(res=>{
+                                            
+                                                    console.log(res.data);
+                                                    setHobbies(res.data);
+                                                    setLoader(false)
+                                                }).catch(err=>console.log(err))
+    useEffect(()=>{
+       connectToServer();
+    },[])
   return (
     <ImageList sx={{ width: 1500 , height: 1000 }}>
       <ImageListItem key="Subheader" cols={2}>
@@ -40,7 +56,7 @@ export default function Hobbies() {
 
 const itemData = [
   {
-    img: 'https://www.awesomecuisine.com/wp-content/uploads/2015/08/mangalore-bonda.jpg',
+    img: 'https://tse1.explicit.bing.net/th?id=OIP.aeLuAdrDhp3cyUEuicwA7QHaFc&pid=Api&P=0',
     title: 'bonda',
     
     rows: 2,
@@ -48,7 +64,7 @@ const itemData = [
     featured: true,
   },
   {
-    img: 'https://1.bp.blogspot.com/-VCkjsS1Tfmo/XgzLILEh5oI/AAAAAAAAACA/Yg7TKYf6VYUlNm33vg35es80Zq3yRMJLwCLcBGAsYHQ/s1600/manchuri.jpg',
+    img: 'https://tse3.mm.bing.net/th?id=OIP.1BKOE7C2ywIBI4g4Rg0MkQHaEK&pid=Api&P=0',
     title: 'manchuria',
     
   },
@@ -83,7 +99,7 @@ const itemData = [
     
   },
   {
-    img: 'http://4.bp.blogspot.com/-FkMpKIx-Pu4/UOp4mWBjpiI/AAAAAAAABLM/Z93yE-skTOE/s1600/sport+bike+hd+desktop+wallpaper.jpg',
+    img: 'https://tse4.mm.bing.net/th?id=OIP.zAOqRhVWng9oVYPC5T90gwHaE8&pid=Api&P=0',
     title: 'bike',
     
   },

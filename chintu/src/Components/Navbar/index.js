@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import {Link} from 'react-router-dom'
 import ajay from '../../Assests/ajay.jpg'
 
-const pages = ['AboutMe', 'Skills', 'Experience', 'Qualification', 'Hobbies'];
+const pages = ['AboutMe', 'Skills', 'Experience', 'Qualification', 'Hobbies','Certifications','Projects','Workshops','Contactme'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {
@@ -38,7 +38,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" sx={{backgroundColor:"green"}}>
+    <AppBar position="static" sx={{backgroundColor:"blue"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />

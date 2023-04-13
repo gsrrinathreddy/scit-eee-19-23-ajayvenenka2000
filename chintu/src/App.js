@@ -6,6 +6,10 @@ import Experience from './Pages/Experience';
 import Hobbies from './Pages/Hobbies';
 import Qualification from './Pages/Qualification';
 import Skills from './Pages/Skills';
+import Projects from './Pages/Projects';
+import Certifications from './Pages/Certifications';
+import Workshops from './Pages/Workshops';
+import Contactme from './Pages/Contactme';
 import './App.css';
 
 function App() {
@@ -19,6 +23,12 @@ function App() {
         <Route path = "Hobbies" element = {<Hobbies/>}/>
         <Route path = "Qualification" element ={<Qualification/>}/>
         <Route path = "Skills" element = {<Skills/>}/>
+        <Route path = "Projects" element = {<Projects/>}/>
+        <Route path = "Certifications" element = {<Certifications/>}/>
+        <Route path = "Workshops" element = {<Workshops/>}/>
+        <Route path = "Contactme" element = {<Contactme/>}/>
+
+
      
        </Routes>
 
